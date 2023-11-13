@@ -4,7 +4,7 @@ const config = require("./config");
 
 const kafka = new Kafka({
   clientId: "consumer-teste",
-  brokers: ["localhost:19092"],
+  brokers: [process.env.BROKERS],
 });
 
 const consumer = kafka.consumer({ groupId: `${config.kafkaTopic}-group` });
