@@ -4,7 +4,7 @@ const config = require("./config");
 
 const kafka = new Kafka({
   clientId: "producer-teste",
-  brokers: [process.env.BROKERS],
+  brokers: ["localhost:19092"],
 });
 
 const producer = kafka.producer();
